@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/react-big-calendar@0.19.0/lib/css/react-big-calendar.css"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link href="%PUBLIC_URL%/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="%PUBLIC_URL%/css/AdminLTE.css" rel="stylesheet" />
+    <link
+      href="%PUBLIC_URL%/font-awesome/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <!-- Toastr style -->
+    <link
+      href="%PUBLIC_URL%/css/plugins/toastr/toastr.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="%PUBLIC_URL%/css/animate.css" rel="stylesheet" />
+    <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet" />
+
+    <title>ePOS</title>
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!-- Mainly scripts -->
+    <script src="%PUBLIC_URL%/js/jquery-3.1.1.min.js"></script>
+    <script src="%PUBLIC_URL%/js/popper.min.js"></script>
+    <script src="%PUBLIC_URL%/js/bootstrap.js"></script>
+    <script src="%PUBLIC_URL%/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="%PUBLIC_URL%/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <link
+      href="%PUBLIC_URL%/css/plugins/dataTables/datatables.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom and plugin javascript -->
+    <script src="%PUBLIC_URL%/js/inspinia.js"></script>
+    <script src="%PUBLIC_URL%/js/plugins/pace/pace.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $(document.body).on("click", ".client-link", function(e) {
+          e.preventDefault();
+          $(".selected .tab-pane").removeClass("active");
+          $($(this).attr("href")).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>

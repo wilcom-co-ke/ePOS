@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>PDF Result Template</title>
+    <style>
+        .Container{ 
+            width: 80%;
+        }
+.Header{
+  
+    width: 100%;
+    display: table;
+   
+}
+      .companyside {
+        margin-right: 30px;
+        display: table-cell;
+}
+.poside{
+    margin-left: 30px;
+    display: table-cell;
+}
+
+.poside p{
+    margin-left: 30px;
+}
+.itemstable{
+    width: 100%;
+}
+.itemstable th {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="Header">
+            <div class="companyside">
+            <p>{{CompanyName}}</p> 
+            <p> {{Address}}</p> 
+            <p>{{Mobile}}</p> 
+            <p>{{Website}}</p>
+            </div>
+            <div class="companyside"></div>
+            <div class="poside">
+                <p style="color: #85C1E9;">PURCHASE ORDER</p> 
+                <p> DATE: <span>Date</span></p> 
+               
+                <p>PO: <span>PO-001</span></p> 
+               
+            </div>
+        </div>
+        <div class="Header">
+            <div class="companyside" >
+            <p style="background-color: darkblue; color: white; width: 100%;">VENDOR</p> 
+            <p > {{SupplierName}}</p> 
+            <p>{{SupplierAddress}}</p> 
+            <p>{{Supplieremail}}</p>          
+            <p>{{SupplierMobile}}</p>          
+            <p>{{SupplierWebsite}}</p> 
+            </div>
+            <div class="companyside"></div>
+            <div class="poside">
+                <p  style="background-color: darkblue;margin-left: 30px; color: white; width: 100%;">PURCHASE ORDER</p> 
+                <p> {{BranchName}}</p> 
+                <p>{{BranchrAddress}}</p> 
+                <p>{{Branchemail}}</p>          
+                <p>{{BranchMobile}}</p>          
+                <p>{{BranchWebsite}}</p>        
+               
+            </div>
+        </div>
+      
+  
+     <div>
+            <table class="itemstable" cellpadding="0" cellspacing="0">
+           
+            <th>Item</th>
+            <th>Description</th>
+            <th>QTY</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+            {{#each Members}}
+
+            <tr>
+                <td>{{Item}}.</td>
+                <td>
+                    {{ Description }}
+                </td>
+                <td>{{ QTY }}</td>
+                <td>{{ price }}</td>
+                <td>{{ total }}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+
+    </div>
+</body>
+
+</html>
